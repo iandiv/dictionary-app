@@ -1,0 +1,40 @@
+ion-item {
+   
+    --background: var(--ion-color-light);
+  
+    // --border-color: var(--ion-color-light);
+  
+    --border-width: 1px;
+  
+    --border-radius: 5px;
+
+   
+  }
+  .padding{
+
+    padding: 10px 10px 0px 10px;
+  }
+  .example{
+   
+    background-color:  var(--ion-color-light);
+    margin: 10px;
+    padding: 10px;
+    
+    box-shadow: rgba(var(--ion-color-example-rgb), 0.02) 0px 1px 1px 0px, rgba(var(--ion-color-example-rgb), 0.15) 0px 0px 0px 1px;
+     border-radius: 5px;
+}
+
+  ol {
+    list-style-type: none;
+    counter-reset: listStyle;
+    padding-left: 0;
+   }
+   li{
+    color: var(--ion-color-dark-shade);
+   
+   }
+   li:before {
+     content: counter(listStyle, lower-alpha) " : ";
+    counter-increment: listStyle;
+    font-weight: bold;
+   }

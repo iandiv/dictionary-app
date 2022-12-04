@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="mycolor">
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="true"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <div style="display: flex;align-items: center;margin: -10px -10px -30px 0px;">
+        <ion-card-subtitle>
+          Plain
+
+        </ion-card-subtitle>
+        <ion-button (click)="clearPlain()" class="btn" fill="clear" color="medium">
+          <ion-icon slot="icon-only" name="trash" class="trash"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-card-header>
+    <ion-item>
+
+      <ion-textarea [autoGrow]="true" placeholder="" [(ngModel)]="message">
+      </ion-textarea>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <div style="display: flex;align-items: center;margin: -10px -10px -30px 0px;">
+        <ion-card-subtitle>
+          Encrypted
+
+        </ion-card-subtitle>
+
+        <ion-button (click)="clearEnc()" class="btn" fill="clear" color="medium">
+          <ion-icon slot="icon-only" name="trash" class="trash"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-card-header>
+
+    <ion-item>
+
+      <ion-textarea [autoGrow]="true" placeholder="" [(ngModel)]="encrypted"></ion-textarea>
+    </ion-item>
+
+  </ion-card>
+  <div class="ion-padding">
+    <ion-button expand="block" (click)="encrypt()" color="mycolor">Encrypt</ion-button>
+    <ion-button expand="block" (click)="decrypt()" color="mysecondcolor">Decrypt</ion-button>
+  </div>
+</ion-content>

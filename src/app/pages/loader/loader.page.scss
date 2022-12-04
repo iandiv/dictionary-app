@@ -1,0 +1,21 @@
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    height: 90%;
+    padding-top: 10%;
+    text-align: center;
+   
+}
+
+
+
+.flex-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+    align-items: center;
+    height: 10%;
+    text-align: center;
+}

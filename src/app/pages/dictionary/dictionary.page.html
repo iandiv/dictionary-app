@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar color="mycolor">
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="true"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+  <ion-toolbar color="mycolor">
+    <ion-searchbar (keyup.enter)="search()" [(ngModel)]="keyword" placeholder="Search"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  
+
+
+  <!-- <div *ngFor="let item of data ">
+    <div *ngFor="let meaning of item.meanings;let i = index">
+      <div>{{i}}</div>
+      <ion-card class="ion-padding">
+        <div>
+          <span style="font-size: 20pt;font-weight: bolder;">{{item.word}}</span>
+          {{meaning.partOfSpeech}}
+        </div>
+        <div *ngFor="let def of meaning.definitions">
+          <p>: &emsp;{{def.definition}}</p>
+        </div>
+      </ion-card>
+    </div>
+
+  </div> -->
+
+  <ion-accordion-group *ngFor="let item of data;let i = index " [multiple]="true" [value]="['0']">
+
+    <ion-card class=" ion-padding">
+
+      <div style="display: flex;flex-wrap: wrap;">
+        <span style="flex: 90%;font-size: 20pt;font-weight: bolder;color:var(--ion-color-dark)">{{item.word}}
+          <span style="font-size: 10pt;font-weight: normal;">{{item.phonetic}} </span></span>
+        <small style="display: flex;flex: 10%;align-items: center;">{{i+1}} of {{(data )?.length}}
+        </small>
+      </div>
+      <br>
+      <br>
+
+      <div *ngFor="let meaning of item.meanings;let i = index">
+        <ol type="a" style="padding-left: 0px;">
+          <ion-accordion value="{{i}}" toggleIcon="caret-down-outline">
+            <ion-item slot="header" color="light">
+              <ion-label>
+                {{meaning.partOfSpeech}}
+              </ion-label>
+            </ion-item>
+
+            <div class="padding" slot="content" *ngFor="let def of meaning.definitions">
+
+              <li>{{def.definition}} </li>
+              <div class="example" *ngIf="def['example']"><i>{{def.example}}</i></div>
+
+            </div>
+
+
+          </ion-accordion>
+        </ol>
+      </div>
+
+
+
+    </ion-card>
+
+  </ion-accordion-group>
+ 
+
+</ion-content>

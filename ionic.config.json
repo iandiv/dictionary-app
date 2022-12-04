@@ -1,0 +1,13 @@
+{
+  "name": "div-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "https://owlbot.info/api/v4/dictionary"
+    }
+  ]
+}
