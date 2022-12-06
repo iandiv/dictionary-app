@@ -7,25 +7,19 @@ const routes: Routes = [
     redirectTo: 'loader',
     pathMatch: 'full'
   },
-  // {
-  //   path: 'folder/:id',
-  //   loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
-  // },
+
   {
     path: 'loader',
-    loadChildren: () => import('./pages/loader/loader.module').then( m => m.LoaderPageModule)
+    loadChildren: () => import('./pages/loader/loader.module').then(m => m.LoaderPageModule)
   },
-  {
-    path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
-  },
+
   {
     path: 'dictionary',
-    loadChildren: () => import('./pages/dictionary/dictionary.module').then( m => m.DictionaryPageModule)
+    loadChildren: () => import('./pages/dictionary/dictionary.module').then(m => m.DictionaryPageModule)
   },
   {
     path: 'about',
-    loadChildren: () => import('./pages/about/about.module').then( m => m.AboutPageModule)
+    loadChildren: () => import('./pages/about/about.module').then(m => m.AboutPageModule)
   },
 
 ];
@@ -36,4 +30,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

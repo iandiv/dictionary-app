@@ -10,9 +10,11 @@ export class LoaderPage implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
-    setTimeout(()=>{
-      this.router.navigate(["dictionary"])
-    },2000)
+    setTimeout(() => {
+      // this.router.navigate(["dictionary"])
+      this.router.navigate(['dictionary'], { replaceUrl: true });
+
+    }, 2000)
   }
 
 }

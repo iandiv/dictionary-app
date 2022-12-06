@@ -32,9 +32,7 @@ export class DictionaryPage implements OnInit {
       (res) => {
         console.log(res);
         this.data = res;
-        // for (let result of this.data) {
-        //   console.log(result.word);
-        // }
+
       })
     Keyboard.hide();
   }
