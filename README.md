@@ -21,7 +21,7 @@ Data fetch from api below: <br/>
 * https://dictionaryapi.dev/
 
 ## Apk Link
-* https://drive.google.com/file/d/1U0vCkRySv32Cc3FXofhHJrGXXlFeQpwm/view?usp=drivesdk
+* https://github.com/iandiv/dictionary-app/releases/
 
 ## Author
 Ian Divinagracia
