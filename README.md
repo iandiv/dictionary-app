@@ -23,5 +23,4 @@ Data fetch from api below: <br/>
 ## Apk Link
 * https://github.com/iandiv/dictionary-app/releases/
 
-## Author
-Ian Divinagracia
+(c) 2023 | IanDiv
